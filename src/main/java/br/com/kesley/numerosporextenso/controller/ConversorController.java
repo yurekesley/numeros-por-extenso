@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.kesley.numerosporextenso.response.NumeroResponse;
 import br.com.kesley.numerosporextenso.service.IConversorService;
 
 @RestController
@@ -16,7 +17,7 @@ public class ConversorController {
 	IConversorService converter;
 
 	@GetMapping("/por-extenso/{numero}")
-	public String converterParaExtenso(@PathVariable Double numero) {
-		return converter.converterToExtenso(numero);
+	public NumeroResponse porExtenso(@PathVariable Double numero) {
+		return new NumeroResponse(converter.converterToExtenso(numero));
 	}
 }
