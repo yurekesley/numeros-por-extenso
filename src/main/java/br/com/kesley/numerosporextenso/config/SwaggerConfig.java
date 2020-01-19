@@ -24,7 +24,7 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo metaData() {
-		return new ApiInfoBuilder().title("Numeros por extenso") //
+		return new ApiInfoBuilder().title("Números por extenso") //
 				.description("\"Spring Boot REST API for greeting orders\"") //
 				.version("0.0.1-SNAPSHOT") //
 				.license("GitHub") //
